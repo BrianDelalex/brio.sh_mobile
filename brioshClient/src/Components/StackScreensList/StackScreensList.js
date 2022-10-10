@@ -11,8 +11,8 @@ const ExecutionStackScreensList = ({ navprops, navigation, List }) => {
         setNavList([]);
         List?.forEach((value, idx) => {
             setNavList(state => [...state,
-            <StyledView onTouchEnd={() => navprops.navigation.navigate(value.props.name)} key={idx} className='bg-gray-100 my-2 p-5 shadow-sm rounded-lg'>
-                <StyledText className='text-xl  font-bold'>{value.props.name}</StyledText>
+            <StyledView onTouchEnd={() => navprops.navigation.navigate(value.props.name)} key={idx} className='bg-gray-100 my-2 p-5 border-[1px] border-gray-300 shadow-sm rounded-lg'>
+                <StyledText className='text-xl'>{value.props.name}</StyledText>
                 <StyledText className="text-ios-active font-bold">Success</StyledText>
                 <StyledText>Deployment time: 429 seconds</StyledText>
             </StyledView>])
@@ -21,7 +21,7 @@ const ExecutionStackScreensList = ({ navprops, navigation, List }) => {
     return (
         <SafeAreaView>
             <StyledView className="p-4 h-full">
-                <StyledText className="text-ios-active text-3xl font-bold">Exens</StyledText>
+                <StyledText className="text-ios-active text-3xl">Exens</StyledText>
                 <ScrollView>
                     {navList}
                 </ScrollView>
