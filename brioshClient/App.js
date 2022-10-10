@@ -3,11 +3,11 @@ import { StatusBar, Text, useColorScheme, View } from 'react-native';
 import { Colors } from 'react-native/Libraries/NewAppScreen';
 import { NavigationContainer } from '@react-navigation/native';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
-import Home from './src/Component/Home';
-import Settings from './src/Component/Settings';
+import Home from './src/Components/Home';
+import Settings from './src/Components/Settings';
 import Ionicons from 'react-native-vector-icons/Ionicons'
 import { styled } from 'nativewind';
-import Teams from './src/Component/Teams/Teams';
+import Teams from './src/Components/Teams/Teams';
 const Tab = createBottomTabNavigator();
 
 const StyledView = styled(View);

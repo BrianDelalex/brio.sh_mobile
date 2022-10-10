@@ -5,12 +5,11 @@ import { SafeAreaView } from "react-native-safe-area-context";
 
 const StyledView = styled(View);
 const StyledText = styled(Text)
-const StackScreensList = ({ navprops, navigation, List }) => {
+const ExecutionStackScreensList = ({ navprops, navigation, List }) => {
     const [navList, setNavList] = useState([]);
-    // console.log(List);
     useEffect(() => {
+        setNavList([]);
         List?.forEach((value, idx) => {
-            console.log(value.props.name);
             setNavList(state => [...state,
             <StyledView onTouchEnd={() => navprops.navigation.navigate(value.props.name)} key={idx} className='bg-gray-100 my-2 p-5 shadow-sm rounded-lg'>
                 <StyledText className='text-xl  font-bold'>{value.props.name}</StyledText>
@@ -21,11 +20,14 @@ const StackScreensList = ({ navprops, navigation, List }) => {
     }, [List])
     return (
         <SafeAreaView>
-            <ScrollView>
-                {navList}
-            </ScrollView>
+            <StyledView className="p-4 h-full">
+                <StyledText className="text-ios-active text-3xl font-bold">Exens</StyledText>
+                <ScrollView>
+                    {navList}
+                </ScrollView>
+            </StyledView>
         </SafeAreaView>
     )
 }
 
-export default StackScreensList;
+export default ExecutionStackScreensList;
