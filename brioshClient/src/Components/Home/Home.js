@@ -4,6 +4,7 @@ import { Text, ScrollView, View, SafeAreaView } from 'react-native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import ExecutionStackScreensList from '../StackScreensList';
 import Separator from '../Separator/Separator';
+import Ionicons from 'react-native-vector-icons/Ionicons';
 
 /* $FlowFixMe[missing-local-annot] The type annotation(s) required by Flow's
  * LTI update could not be added via codemod */
@@ -15,20 +16,29 @@ const Stack = createNativeStackNavigator();
 const CommandExecutionInfoStack = ({ name, time, source, command }) => {
     return (
         <StyledSafeAreaView className="flex flex-col p-4">
-            <StyledText className="p-4 text-ios-active text-3xl">Details:</StyledText>
-            <Separator />
-            <StyledView className='p-4 flex flex-col items-left'>
-                <StyledText className="">Execution time: {time}s</StyledText>
-                <StyledText className="">Command source: {source}</StyledText>
-                <StyledText className="">Executed command: {command}</StyledText>
-                <StyledText className="">Exit code: 0</StyledText>
+            <StyledView className='p-4 flex flex-row items-left justify-around'>
+                <StyledView className="bg-ios-inactive bg-opacity-5  w-1/3 h-28 flex flex-col justify-center items-center">
+                    <Ionicons name="hourglass-outline" color="#FFF" size={30} />
+                    <StyledText className='text-white text-xl'>39s</StyledText>
+                </StyledView>
+                <StyledView className="bg-ios-inactive bg-opacity-5 w-1/3 h-28 flex flex-col justify-center items-center">
+                    <Ionicons name="terminal-outline" color="#FFF" size={30} />
+                    <StyledText className='text-white text-xl'>AWS</StyledText>
+
+                </StyledView>
+                <StyledView className="bg-ios-inactive bg-opacity-5 w-1/3 h-28 flex flex-col justify-center items-center">
+                    <Ionicons name="help-outline" color="#FFF" size={30} />
+                    <StyledText className='text-white text-xl'>0</StyledText>
+
+                </StyledView>
             </StyledView>
-            <StyledText className="p-4 text-ios-active text-3xl">Logs:</StyledText>
-            <Separator />
+            <StyledText className="bg-slate-700 mx-4 text-gray-100 text-lg p-4">$ aws deploy --now</StyledText>
             <StyledView className="p-2 h-[95%]">
-                <StyledView className="max-h-[50%] p-4 bg-gray-800 rounded-md">
+                <StyledText className='text-ios-active text-xl'>Command logs:</StyledText>
+                <Separator/>
+                <StyledView className="max-h-[50%] mt-1 p-4 bg-slate-700 rounded-md">
                     <ScrollView>
-                        <StyledText className="text-gray-600 ">
+                        <StyledText className=" text-gray-400 ">
                             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Tristique senectus et netus et malesuada fames ac. Tempor orci eu lobortis elementum nibh tellus molestie. Massa eget egestas purus viverra accumsan in nisl nisi.
                             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Tristique senectus et netus et malesuada fames ac. Tempor orci eu lobortis elementum nibh tellus molestie. Massa eget egestas purus viverra accumsan in nisl nisi.
                             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Tristique senectus et netus et malesuada fames ac. Tempor orci eu lobortis elementum nibh tellus molestie. Massa eget egestas purus viverra accumsan in nisl nisi.
