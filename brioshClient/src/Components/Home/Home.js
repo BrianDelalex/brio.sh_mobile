@@ -49,7 +49,7 @@ const Home = () => {
     const isLoadingDone = useRef(false);
     useEffect(() => {
         if (isLoadingDone.current === false) {
-            for (let i = 0; i < 5; i++) {
+            for (let i = 0; i < 10; i++) {
                 setStackScreens(state => [...state, <Stack.Screen key={i} name={`Random Command ${i}`} children={() => <CommandExecutionInfoStack name={`Random command ${i}`} time={428} source='AWS' command='$ aws deploy' />} />])
                 isLoadingDone.current = true;
             }
