@@ -15,43 +15,40 @@ const Stack = createNativeStackNavigator();
 
 const CommandExecutionInfoStack = ({ name, time, source, command }) => {
     return (
-        <StyledSafeAreaView className="flex flex-col p-4">
-            <StyledView className='p-4 flex flex-row items-left justify-around'>
-                <StyledView className="bg-ios-inactive bg-opacity-5  w-1/3 h-28 flex flex-col justify-center items-center">
-                    <Ionicons name="hourglass-outline" color="#FFF" size={30} />
-                    <StyledText className='text-white text-xl'>39s</StyledText>
+        <SafeAreaView edges={["top", "right", "left"]}>
+            <StyledView className="h-full max-h-full flex flex-col">
+                 <StyledView className='h-[15%] flex flex-row items-left justify-around z-20 shadow-md'>
+                    <StyledView className="bg-ios-inactive bg-opacity-5  w-1/3 flex flex-col justify-center items-center">
+                        <Ionicons name="hourglass-outline" color="#FFF" size={30} />
+                        <StyledText className='text-white text-xl'>39s</StyledText>
+                    </StyledView>
+                    <StyledView className="bg-ios-inactive bg-opacity-5 w-1/3 flex flex-col justify-center items-center">
+                        <Ionicons name="terminal-outline" color="#FFF" size={30} />
+                        <StyledText className='text-white text-xl'>AWS</StyledText>
+                    </StyledView>
+                    <StyledView className="bg-ios-inactive bg-opacity-5 w-1/3 flex flex-col justify-center items-center">
+                        <Ionicons name="help-outline" color="#FFF" size={30} />
+                        <StyledText className='text-white text-xl'>0</StyledText>
+                    </StyledView>
                 </StyledView>
-                <StyledView className="bg-ios-inactive bg-opacity-5 w-1/3 h-28 flex flex-col justify-center items-center">
-                    <Ionicons name="terminal-outline" color="#FFF" size={30} />
-                    <StyledText className='text-white text-xl'>AWS</StyledText>
-
+                <StyledView className='h-[10%] flex flex-col  justify-center bg-slate-700 z-10  shadow-md px-2'>
+                    <StyledText className="text-gray-100 text-lg ">$ aws deploy --now</StyledText>
                 </StyledView>
-                <StyledView className="bg-ios-inactive bg-opacity-5 w-1/3 h-28 flex flex-col justify-center items-center">
-                    <Ionicons name="help-outline" color="#FFF" size={30} />
-                    <StyledText className='text-white text-xl'>0</StyledText>
-
-                </StyledView>
-            </StyledView>
-            <StyledText className="bg-slate-700 mx-4 text-gray-100 text-lg p-4">$ aws deploy --now</StyledText>
-            <StyledView className="p-2 h-[95%]">
-                <StyledText className='text-ios-active text-xl'>Command logs:</StyledText>
-                <Separator/>
-                <StyledView className="max-h-[50%] mt-1 p-4 bg-slate-700 rounded-md">
+                
+                <StyledView className="bg-slate-700 h-[75%]">
                     <ScrollView>
-                        <StyledText className=" text-gray-400 ">
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Tristique senectus et netus et malesuada fames ac. Tempor orci eu lobortis elementum nibh tellus molestie. Massa eget egestas purus viverra accumsan in nisl nisi.
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Tristique senectus et netus et malesuada fames ac. Tempor orci eu lobortis elementum nibh tellus molestie. Massa eget egestas purus viverra accumsan in nisl nisi.
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Tristique senectus et netus et malesuada fames ac. Tempor orci eu lobortis elementum nibh tellus molestie. Massa eget egestas purus viverra accumsan in nisl nisi.
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Tristique senectus et netus et malesuada fames ac. Tempor orci eu lobortis elementum nibh tellus molestie. Massa eget egestas purus viverra accumsan in nisl nisi.
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Tristique senectus et netus et malesuada fames ac. Tempor orci eu lobortis elementum nibh tellus molestie. Massa eget egestas purus viverra accumsan in nisl nisi.
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Tristique senectus et netus et malesuada fames ac. Tempor orci eu lobortis elementum nibh tellus molestie. Massa eget egestas purus viverra accumsan in nisl nisi.
+                        <StyledText className=" p-4  text-gray-400 ">
+                           por incididunt ut labore et dolore magna aliqua. Tristique senectus et netus et malesuada fames ac. Tempor orci eu lobortis elementum nibh tellus molestie. Massa eget egestas purus viverra accumsan in nisl nisi.
+                            Lom dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Tristique senectus et netus et malesuada fames ac. Tempor orci eu lobortis elementum nibh tellus molestie. Massa eget egestas purus viverra accumsan in nisl nisi.
                         </StyledText>
                     </ScrollView>
                 </StyledView >
             </StyledView>
-        </StyledSafeAreaView >
+        </SafeAreaView>
     )
 }
+{/* <StyledText className='text-ios-active text-xl'>Command logs:</StyledText>
+<Separator/> */}
 
 
 const Home = () => {

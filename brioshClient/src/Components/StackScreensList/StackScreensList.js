@@ -24,8 +24,8 @@ const ExecutionStackScreensList = ({ navprops, navigation, List }) => {
         })
     }, [List])
     return (
-        <SafeAreaView>
-            <StyledView className="p-4 h-[104%]">
+        <SafeAreaView edges={["top","right","left"]}>
+            <StyledView className="px-4 h-full">
                 <StyledText className="text-ios-active text-3xl">Your commands:</StyledText>
                 <ScrollView>
                     {navList}

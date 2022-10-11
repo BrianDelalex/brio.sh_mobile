@@ -10,7 +10,7 @@ const Teams = () => {
     return (
         <SafeAreaView>
             <StyledView className="p-4">
-                <StyledText className="text-3xl text-ios-active font-bold">Teams</StyledText>
+                <StyledText className="text-3xl text-ios-active">Teams</StyledText>
             </StyledView>
         </SafeAreaView>
     )

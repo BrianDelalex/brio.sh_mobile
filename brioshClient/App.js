@@ -8,6 +8,7 @@ import Settings from './src/Components/Settings';
 import Ionicons from 'react-native-vector-icons/Ionicons'
 import { styled } from 'nativewind';
 import Teams from './src/Components/Teams/Teams';
+import { SafeAreaView } from 'react-native-safe-area-context';
 const Tab = createBottomTabNavigator();
 
 const StyledView = styled(View);
@@ -16,10 +17,10 @@ const App = () => {
 
   return (
     <NavigationContainer>
-      <StyledView className="h-screen">
         <StatusBar barStyle={'dark-content'} />
         <Tab.Navigator
           screenOptions={({ route }) => ({
+            tabBarStyle: {height: "10%"},
             tabBarIcon: ({ focused, color, size }) => {
               let iconName;
 
@@ -51,7 +52,6 @@ const App = () => {
             headerShown: false,
           }} name="Settings" component={Settings} />
         </Tab.Navigator>
-      </StyledView>
     </NavigationContainer>
   );
 };
