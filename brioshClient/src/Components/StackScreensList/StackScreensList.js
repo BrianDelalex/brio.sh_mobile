@@ -1,3 +1,9 @@
+/*
+    ** TheOrionsB
+    ** nathan@nuz.sh
+    ** Home.js
+*/
+
 import { styled } from "nativewind";
 import React, { useEffect, useState } from "react";
 import { Pressable, ScrollView, Text, View } from "react-native";

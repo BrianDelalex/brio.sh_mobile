@@ -1,3 +1,9 @@
+/*
+    ** TheOrionsB
+    ** nathan@nuz.sh
+    ** Home.js
+*/
+
 import React, { useEffect, useRef, useState } from 'react';
 import { styled } from 'nativewind';
 import { Text, ScrollView, View, SafeAreaView } from 'react-native';
@@ -34,7 +40,6 @@ const CommandExecutionInfoStack = ({ name, time, source, command }) => {
                 <StyledView className='h-[10%] flex flex-col  justify-center bg-slate-700 z-10  shadow-md px-2'>
                     <StyledText className="text-gray-100 text-lg ">$ aws deploy --now</StyledText>
                 </StyledView>
-                
                 <StyledView className="bg-slate-700 h-[75%]">
                     <ScrollView>
                         <StyledText className=" p-4  text-gray-400 ">

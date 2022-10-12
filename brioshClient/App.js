@@ -1,3 +1,9 @@
+/*
+    ** TheOrionsB
+    ** nathan@nuz.sh
+    ** Home.js
+*/
+
 import React from 'react';
 import { StatusBar, Text, useColorScheme, View } from 'react-native';
 import { Colors } from 'react-native/Libraries/NewAppScreen';

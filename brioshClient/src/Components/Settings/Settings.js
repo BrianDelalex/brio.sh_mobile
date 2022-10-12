@@ -1,3 +1,9 @@
+/*
+    ** TheOrionsB
+    ** nathan@nuz.sh
+    ** Home.js
+*/
+
 import React from "react";
 import { styled } from "nativewind";
 import { View, Text } from "react-native";
